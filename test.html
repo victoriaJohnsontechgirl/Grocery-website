@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Toggle on Mouseover</title>
+</head>
+<body>
+
+  <div id="imageContainer">
+    <img src="images/f1.png" alt="Image A" id="imageA" onmouseover="showImage('imageB')" onmouseout="showImage('imageA')">
+    <img src="images/fc1.png" alt="Image B" id="imageB" style="display: none;">
+  </div>
+
+  <script>
+    function showImage(imageId) {
+      var imageA = document.getElementById('imageA');
+      var imageB = document.getElementById('imageB');
+
+      if (imageId === 'imageB') {
+        imageA.style.display = 'none';
+        imageB.style.display = 'inline';
+      } else {
+        imageA.style.display = 'inline';
+        imageB.style.display = 'none';
+      }
+    }
+  </script>
+
+</body>
+</html>
